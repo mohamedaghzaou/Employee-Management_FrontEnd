@@ -1,20 +1,13 @@
-
-
  export class employee{
     employeeId?:number;
     firstName?:string;
     lastName?:string;
     midName?:string;
-    birthDate?:Date;
+    birthDate?:string;
     sex?:string;
     Address?:string;
-    employeeDate?:Date;
+    employeeDate?:string;
     salary?:number;
     position?:string;
     departments?:string;
-
-
-
-
-
 }
