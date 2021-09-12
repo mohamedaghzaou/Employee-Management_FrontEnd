@@ -14,6 +14,7 @@ export class EmployeesDetailsComponent implements OnInit {
 
 
   EmployeeList:employee[]=[];
+  filter :string=''
   constructor(private employeeService :EmployeeService) { 
         this.employeeService.getALLEmployees().subscribe(data=>{
           this.EmployeeList= data;

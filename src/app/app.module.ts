@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeDetailsComponent } from './Components/employee-details/employee-details.component';
 import { EmployeesDetailsComponent } from './Components/employees-details/employees-details.component';
+import { FilterPipe } from './shared/pipe/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeDetailsComponent,
-    EmployeesDetailsComponent
+    EmployeesDetailsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

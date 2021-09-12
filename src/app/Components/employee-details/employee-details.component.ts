@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { employee } from 'src/app/shared/models/employee';
 
 @Component({
@@ -10,6 +10,7 @@ import { employee } from 'src/app/shared/models/employee';
 export class EmployeeDetailsComponent implements OnInit {
   
  @Input() EmployeeList:employee[]
+ @Input() filterValue:string;
   constructor() { 
   }
 
@@ -17,7 +18,7 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   delete(id:number){
-    
+
   }
 
 }

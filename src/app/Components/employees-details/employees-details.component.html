@@ -1,6 +1,6 @@
 <div class="row p-3">
     <div class="col-sm-3">
-        <input type="text" class="form-control dark-shadow" placeholder="Search By Name">
+        <input type="text" class="form-control dark-shadow" [(ngModel)]="filter" placeholder="Search By Name">
     </div>
     <div class="col-sm-1">
         <button class="btn btn-dark mt-3 mt-md-0">Search</button>
@@ -10,5 +10,5 @@
     </div>
 </div>
 <div class="row p-3">
-    <app-employee-details [EmployeeList]="EmployeeList"></app-employee-details>
+    <app-employee-details [EmployeeList]="EmployeeList" [filterValue]="filter"></app-employee-details>
 </div>
