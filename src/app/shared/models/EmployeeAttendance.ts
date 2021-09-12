@@ -2,8 +2,8 @@
 export class EmployeeAttendance {
 
     id?:number;
-    timeIN?:Date;
-    timeOut?:Date;
-    remarks?:string
+    timeIN:Date;
+    timeOut:Date;
+    remarks:string
     
 }

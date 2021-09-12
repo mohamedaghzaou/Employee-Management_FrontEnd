@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>BirthDate</th>
+            <th>Employee Date</th>
+            <th>Position</th>
+            <th>Department</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of EmployeeList">
+            <td>{{employee.firstName +' '+employee.lastName |titlecase }}</td>
+            <td>{{employee.birthDate | date:"dd-MM-yyyy"}}</td>
+            <td>{{employee.employeeDate | date:"dd-MM-yyyy"}}</td>
+            <td>{{employee.position.positionName}}</td>
+            <td>{{employee.departments.departmentName}}</td>
+            <td><i class=" fa fa-edit" [routerLink]="['employee',employee.employeeId]"></i></td>
+            <td><i class=" fa fa-remove text-danger" (click)="delete(employee.employeeId)"></i></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
