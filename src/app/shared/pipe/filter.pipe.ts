@@ -6,13 +6,13 @@ import { employee } from '../models/employee';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: employee[],startwith:string): employee[] {
+  transform(value: employee[],filterby:string,startwith:string): employee[] {
     if(startwith===''){
       return value;
     }
     let employee= [];
     value.forEach(e=>{
-      if(e.firstName.startsWith(startwith)){
+      if(e[filterby].startsWith(startwith)){
 
         employee.push(e)
       }

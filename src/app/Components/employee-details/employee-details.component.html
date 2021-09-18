@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of EmployeeList | filter:filterValue">
+        <tr *ngFor="let employee of EmployeeList | filter:'firstName':filterValue ">
             <td>{{employee.firstName +' '+employee.lastName |titlecase }}</td>
             <td>{{employee.birthDate | date:"dd-MM-yyyy "}}</td>
             <td>{{employee.employeeDate | date:"dd-MM-yyyy "}}</td>
